@@ -23,8 +23,10 @@
  *
  */
 
-const yelling = words => {
-  // Your code here
+function yelling(words) {
+  const newWords = words.map(word => word.toUpperCase())
+
+  return newWords
 }
 
 /**
@@ -37,7 +39,11 @@ const yelling = words => {
  *
  */
 
-// ...
+function doubleTrouble(numbers) {
+  const newNumbers = numbers.map(number => number * 2)
+
+  return newNumbers
+}
 
 /*
  * 3) Define a function stringyIndexes() that takes an array of
@@ -48,7 +54,13 @@ const yelling = words => {
  *
  */
 
-// ...
+function stringyIndexes(strings) {
+  const newStrings = strings.map(
+    (string, index) => `${string} is at index ${index}`
+  )
+
+  return newStrings
+}
 
 /*
  * 4) Define a function onlyTheEvenSurvive that accepts an array of
@@ -58,7 +70,11 @@ const yelling = words => {
  *
  */
 
-// ...
+function onlyTheEvenSurvive(numbers) {
+  const onlyTheElementsThatAreEven = numbers.filter(number => number % 2 === 0)
+
+  return onlyTheElementsThatAreEven
+}
 
 /*
  * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
@@ -68,8 +84,13 @@ const yelling = words => {
  *
  */
 
-// ...
+function onlyTheEvenIndexedSurvive(numbers) {
+  const onlyTheElementsAtIndexesThatAreEven = numbers.filter(
+    (number, index) => index % 2 === 0
+  )
 
+  return onlyTheElementsAtIndexesThatAreEven
+}
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
  * movie objects AND a year and returns the names of movies that are
@@ -87,7 +108,11 @@ const yelling = words => {
  *
  */
 
-// ...
+function bestMoviesOfTheYear(movies, yearToConsider) {
+  return movies
+    .filter(movie => movie.score > 90 && movie.year === yearToConsider)
+    .map(movie => movie.name)
+}
 
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
@@ -98,7 +123,10 @@ const yelling = words => {
  *
  */
 
-// ...
+function everyoneIsOdd(numbers) {
+  const isItTrue = numbers.every(number => number % 2 === 1)
+  return isItTrue
+}
 
 /*
  * 8) Define a function findTheNeedle that accepts an array of
@@ -108,8 +136,12 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
-// ...
+function findTheNeedle(strings) {
+  const theStringThatContainsNeedleInside = strings.find(string =>
+    string.includes('needle')
+  )
+  return theStringThatContainsNeedleInside
+}
 
 /*
  * 9) Define a function findTheNeedleIndex that accepts an array of
@@ -120,7 +152,12 @@ const yelling = words => {
  *
  */
 
-// ...
+function findTheNeedleIndex(strings) {
+  const theIndexOftheStringThatContainsNeedleInside = strings.findIndex(
+    string => string.includes('needle')
+  )
+  return theIndexOftheStringThatContainsNeedleInside
+}
 
 /*
  *` 10)  Define a function someoneToLove that accepts an array of
@@ -131,7 +168,12 @@ const yelling = words => {
  *
  */
 
-// ...
+function someoneToLove(strings) {
+  const isAtLeastOneStringThatIsExactlyFourCharactersLong = strings.some(
+    string => string.length === 4
+  )
+  return isAtLeastOneStringThatIsExactlyFourCharactersLong
+}
 
 /*
  * 11)  Define a function objectKeys that accepts an object of
